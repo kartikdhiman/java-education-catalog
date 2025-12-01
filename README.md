@@ -18,10 +18,15 @@ This project is a call for the **community to collaborate**, to **show that Java
 ### Tutorial
 
 - [Java Quick Start](https://foojay.io/java-quick-start/) - On Foojay.io: Step-by-step instructions to install Java on Windows, Linux, and macOS. And 10 short lessons to learn the very basics of the Java programming language.
+- [Getting Started with Java by Devoxx4Kids](https://github.com/devoxx4kids/materials/blob/master/workshops/java/en/chapters/intro.adoc): Installing and Fundamentals.
+- [Minecraft Modding by Devoxx4Kids](https://github.com/devoxx4kids/materials/tree/master/workshops/minecraft): How to do Minecraft modding with two different tools:
+  - Forge: client-side modding, which only works if you have the mod installed. With Forge, you can do lots of cool things like making new blocks, items, mobs, and even biomes and dimensions.
+  - Spigot: server-side modding, anyone who connects to the server can enjoy the mods installed. Most big servers, like Mineplex and Hypixel, are Spigot servers.
 
 ### Raspberry Pi
 
-- [Getting started with Java and electronics with JBang - Pi4J ](https://www.pi4j.com/examples/jbang/) - Want to get started with Java programming on the Raspberry Pi? JBang is a great way to create your first program to control electronic components connected to the GPIO pins of a Raspberry Pi.
+- [Control electronics with Java, JBang, and Pi4J on the Raspberry Pi](https://www.pi4j.com/examples/jbang/) - Want to get started with Java programming on the Raspberry Pi? JBang is a great way to create your first program to control electronic components connected to a Raspberry Pi's GPIO pins.
+- [eBook: "Getting Started with Java on the Raspberry Pi" by Frank Delporte](https://webtechie.be/books/): Controlling physical things with some lines of code is magic! This book includes a lot of information, history about Java itself, and how to install and use Java on the Raspberry Pi to interact with electronic components. 
 
 ## 📚 How to Contribute
 
