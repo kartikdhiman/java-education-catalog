@@ -15,6 +15,11 @@ This project is a call for the **community to collaborate**, to **show that Java
 
 - [Java in Education – Wiki Page](https://github.com/jcp-org/Java-in-Education/wiki/Java-in-Education---Wiki-Page) – Community-curated wiki about Java teaching and educational initiatives.
 
+### Info About Java
+
+- [Foojay.io](https://foojay.io/): Foojay is a central resource for the Java community’s daily ​information needs, a place for friends of OpenJDK, ​and a community platform for the Java ecosystem​, bringing together and helping Java professionals everywhere.​
+- [java.evolved](https://javaevolved.github.io/): Java has evolved. Your code can too. A collection of modern Java code snippets. Every old Java pattern next to its clean, modern replacement — side by side.
+
 ### Tutorial
 
 - [Java Quick Start](https://foojay.io/java-quick-start/) - On Foojay.io: Step-by-step instructions to install Java on Windows, Linux, and macOS. And 10 short lessons to learn the very basics of the Java programming language.
