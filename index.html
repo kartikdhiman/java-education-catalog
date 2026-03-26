@@ -4,58 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Foojay Java in Education Catalog</title>
-  <meta name="description" content="A community-driven catalog of Java learning resources — wikis, tutorials, and tools for students, educators, coding clubs, and developers.">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Foojay Java in Education Catalog">
-  <meta property="og:description" content="A community-driven catalog of Java learning resources — wikis, tutorials, and tools for students, educators, coding clubs, and developers.">
-  <meta property="og:site_name" content="Foojay Java in Education Catalog">
-  <meta property="og:locale" content="en_US">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Foojay Java in Education Catalog">
-  <meta name="twitter:description" content="A community-driven catalog of Java learning resources — wikis, tutorials, and tools for students, educators, coding clubs, and developers.">
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Foojay Java in Education Catalog",
-    "url": "https://github.com/foojayio/java-education-catalog",
-    "description": "A community-driven catalog of Java learning resources — wikis, tutorials, and tools for students, educators, coding clubs, and developers.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Foojay.io – Friends of OpenJDK",
-      "url": "https://foojay.io"
-    }
-  }
-  </script>
+  <meta name="description" content="A community-driven catalog of Java learning resources for students, educators, coding clubs, and developers.">
 
   <style>
     :root {
-      --bg: #0f1117;
-      --surface: #181b24;
-      --card: #1e2230;
-      --border: #2a2e3d;
-      --accent: #6c63ff;
-      --accent2: #38bdf8;
-      --accent3: #f472b6;
+      --bg: #00131B;
+      --card: #132733;
+      --border: #2b4958;
+      --accent: #3562E5;
+      --accent2: #4FC3F7;
+      --accent3: #5EB761;
+      --accent4: #F0981B;
       --text: #e2e4ea;
-      --text-muted: #8b8fa3;
+      --text-muted: #9fb4c0;
       --text-bright: #ffffff;
       --radius: 12px;
       --max-w: 1180px;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
@@ -63,59 +34,98 @@
     }
 
     a { color: var(--accent2); text-decoration: none; transition: color .2s; }
-    a:hover { color: var(--accent3); }
-    /* Inline text links (inside paragraphs, descriptions) should be underlined */
-    p a, .person-info p a { text-decoration: underline; text-underline-offset: 2px; }
+    a:hover { color: var(--accent4); }
+    p a, li a { text-decoration: underline; text-underline-offset: 2px; }
 
-    /* ---- NAV ---- */
     nav {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(15,17,23,.85);
-      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(0, 19, 27, .88);
+      backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
     }
     .nav-inner {
-      max-width: var(--max-w); margin: 0 auto;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: .75rem 1.5rem;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: .8rem 1.5rem;
     }
     .nav-logo {
-      font-size: 1.25rem; font-weight: 800; color: var(--text-bright); letter-spacing: -.02em;
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text-bright);
+      letter-spacing: -.02em;
     }
-    .nav-logo .ai { color: var(--accent); }
-    .nav-logo .jvm { color: var(--accent2); }
-    .nav-links { display: flex; gap: 1.25rem; flex-wrap: wrap; }
-    .nav-links a { color: var(--text-muted); font-size: .875rem; font-weight: 500; }
+    .nav-logo .brand { color: var(--accent2); }
+    .nav-links { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .nav-links a { color: var(--text-muted); font-size: .875rem; font-weight: 600; }
     .nav-links a:hover { color: var(--text-bright); }
     .mobile-toggle { display: none; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
 
-    /* ---- HERO ---- */
     .hero {
-      text-align: center;
-      padding: 5rem 1.5rem 4rem;
-      background: radial-gradient(ellipse at 50% 0%, rgba(108,99,255,.15) 0%, transparent 60%);
+      padding: 4rem 1.5rem 3rem;
+      background: radial-gradient(ellipse at 50% 0%, rgba(53, 98, 229, .25) 0%, transparent 60%);
     }
+    .hero-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.4rem;
+      text-align: left;
+    }
+    .hero-logo {
+      max-width: 150px;
+      max-height: 150px;
+      width: auto;
+      height: auto;
+      display: block;
+      flex-shrink: 0;
+    }
+    .hero-copy { max-width: 900px; }
     .hero h1 {
       font-size: clamp(2rem, 5vw, 3.5rem);
       font-weight: 800;
       color: var(--text-bright);
       letter-spacing: -.03em;
-      margin-bottom: .75rem;
+      margin-bottom: .8rem;
     }
-    .hero h1 span { background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .hero p { max-width: 640px; margin: 0 auto; color: var(--text-muted); font-size: 1.15rem; }
+    .hero h1 span {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-subtitle {
+      max-width: 900px;
+      margin: 0 auto .65rem;
+      color: #c5d8e3;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    .hero-description {
+      max-width: 940px;
+      margin: 0 auto .45rem;
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
 
-    /* ---- SECTIONS ---- */
-    section { padding: 4rem 1.5rem; }
+    section { padding: 3.5rem 1.5rem; }
     .container { max-width: var(--max-w); margin: 0 auto; }
     .section-title {
-      font-size: 1.75rem; font-weight: 700; color: var(--text-bright);
-      margin-bottom: .5rem; letter-spacing: -.02em;
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--text-bright);
+      margin-bottom: .5rem;
+      letter-spacing: -.02em;
     }
-    .section-subtitle { color: var(--text-muted); margin-bottom: 2rem; max-width: 640px; }
+    .section-subtitle { color: var(--text-muted); margin-bottom: 2rem; max-width: 700px; }
     .section-divider { border: none; border-top: 1px solid var(--border); max-width: var(--max-w); margin: 0 auto; }
 
-    /* ---- CARD GRID ---- */
     .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -128,192 +138,253 @@
       padding: 1.5rem;
       transition: border-color .2s, transform .2s;
     }
-    .card:hover { border-color: var(--accent); }
-    /* Clickable card: entire card is an <a> tag */
-    a.card { display: block; color: inherit; text-decoration: none; cursor: pointer; }
-    a.card:hover { color: inherit; transform: translateY(-2px); }
-    a.card h3 { color: var(--text-bright); }
-    a.card p { color: var(--text-muted); }
-    /* Card title links */
-    .card h3 a { color: var(--text-bright); text-decoration: none; }
-    .card h3 a:hover { text-decoration: underline; color: var(--text-bright); }
+    .card:hover { border-color: rgba(79,195,247,.55); }
+    a.card {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    a.card:hover {
+      color: inherit;
+      border-color: var(--accent2);
+      transform: translateY(-2px);
+    }
     .card-badge {
       display: inline-block;
       font-size: .7rem;
-      font-weight: 600;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: .05em;
       padding: .2rem .55rem;
       border-radius: 6px;
       margin-bottom: .75rem;
     }
-    .badge-framework { background: rgba(108,99,255,.2); color: #a5a0ff; }
-    .badge-inference { background: rgba(56,189,248,.2); color: #7dd3fc; }
-    .badge-assistant { background: rgba(244,114,182,.2); color: #f9a8d4; }
-    .badge-resource { background: rgba(52,211,153,.2); color: #6ee7b7; }
-    .badge-video { background: rgba(251,191,36,.2); color: #fcd34d; }
-    .card h3 { font-size: 1.1rem; font-weight: 600; color: var(--text-bright); margin-bottom: .4rem; }
-    .card p { font-size: .9rem; color: var(--text-muted); margin-bottom: .75rem; }
-    .card-links { display: flex; gap: .75rem; flex-wrap: wrap; }
-    .card-links a { font-size: .8rem; font-weight: 500; }
+    .badge-framework { background: rgba(53,98,229,.2); color: #8aa7ff; }
+    .badge-inference { background: rgba(79,195,247,.2); color: #9ddfff; }
+    .badge-assistant { background: rgba(240,152,27,.2); color: #f9be6b; }
+    .badge-resource { background: rgba(94,183,97,.2); color: #8ddd90; }
 
-    /* ---- LINK ICONS ---- */
-    .icon { font-size: 0; }
+    .card h3 {
+      font-size: 1.06rem;
+      font-weight: 600;
+      color: var(--text-bright);
+      margin-bottom: .45rem;
+    }
+    .card h3 a { color: var(--text-bright); text-decoration: none; }
+    .card h3 a:hover { text-decoration: underline; color: var(--text-bright); }
+    .card p, .card li {
+      font-size: .9rem;
+      color: var(--text-muted);
+    }
+    .card ul { margin-top: .4rem; margin-left: 1rem; }
+    .card-links { display: flex; gap: .8rem; margin-top: .8rem; flex-wrap: wrap; }
+    .card-links a { display: inline-flex; align-items: center; gap: .35rem; font-size: .82rem; color: var(--text-muted); }
+    .card-links a:hover { color: var(--text-bright); }
+    .icon { font-size: inherit; }
     .icon::before {
-      content: '';
+      content: "";
       display: inline-block;
-      width: 16px; height: 16px;
+      width: 16px;
+      height: 16px;
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
-      opacity: .7;
+      opacity: .8;
       transition: opacity .2s;
     }
     .icon:hover::before { opacity: 1; }
-    .icon-github::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238b8fa3'%3E%3Cpath d='M12 .3a12 12 0 00-3.8 23.38c.6.12.82-.26.82-.58L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.31-5.47-1.34-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 016.02 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 011.23 3.22c0 4.61-2.8 5.62-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .32.2.7.82.58A12 12 0 0012 .3'/%3E%3C/svg%3E"); }
-    .icon-x::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238b8fa3'%3E%3Cpath d='M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z'/%3E%3C/svg%3E"); }
-    .icon-linkedin::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238b8fa3'%3E%3Cpath d='M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z'/%3E%3C/svg%3E"); }
-    .icon-bluesky::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238b8fa3'%3E%3Cpath d='M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.785 2.627 3.6 3.497 6.212 3.252-3.953.672-8.34 3.1-4.596 8.501 4.073 4.902 6.25-1.494 7.76-4.715C11.24 20.508 12.622 22 15.76 22c3.138 0 4.215-4.498 5.76-4.715 1.51 3.221 3.687 9.617 7.76 4.715 3.744-5.4-.643-7.829-4.596-8.501 2.612.245 5.427-.625 6.212-3.252.246-.83.624-5.789.624-6.479 0-.688-.139-1.86-.902-2.203-.659-.299-1.664-.621-4.3 1.24C23.046 4.747 20.087 8.686 19 10.8'/%3E%3C/svg%3E"); }
-    .icon-youtube::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238b8fa3'%3E%3Cpath d='M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.546 12 3.546 12 3.546s-7.505 0-9.377.504A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.504 9.376.504 9.376.504s7.505 0 9.377-.504a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z'/%3E%3C/svg%3E"); }
-    .icon-web::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238b8fa3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z'/%3E%3C/svg%3E"); }
+    .icon-web::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239fb4c0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z'/%3E%3C/svg%3E"); }
+    .icon-github::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%239fb4c0'%3E%3Cpath d='M12 .3a12 12 0 00-3.8 23.38c.6.12.82-.26.82-.58L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.31-5.47-1.34-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 016.02 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 011.23 3.22c0 4.61-2.8 5.62-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .32.2.7.82.58A12 12 0 0012 .3'/%3E%3C/svg%3E"); }
 
-    /* ---- PEOPLE ---- */
-    .people-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 1rem;
-    }
-    .person {
-      display: flex; align-items: center; gap: 1rem;
-      background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
-      padding: 1rem 1.25rem;
-      transition: border-color .2s;
-    }
-    .person:hover { border-color: var(--accent2); }
-    .person-avatar {
-      width: 48px; height: 48px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.25rem; font-weight: 700; color: #fff; flex-shrink: 0;
-      overflow: hidden;
-    }
-    .person-avatar img { width: 100%; height: 100%; object-fit: cover; }
-    .person-info h4 { font-size: .95rem; font-weight: 600; color: var(--text-bright); }
-    .badge-champion {
-      display: inline-block;
-      font-size: .55rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: .04em;
-      padding: .1rem .4rem;
-      border-radius: 4px;
-      background: rgba(250,204,21,.2);
-      color: #fde047;
-      white-space: nowrap;
-      margin-top: .2rem;
-    }
-    .person-info p { font-size: .8rem; color: var(--text-muted); }
-    .person-info .person-links { margin-top: .25rem; display: flex; gap: .5rem; flex-wrap: wrap; }
-    .person-info .person-links a { font-size: .78rem; }
-
-    /* ---- RESOURCES ---- */
-    .resource-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-      gap: 1.25rem;
-    }
-
-    /* ---- NEWS TICKER ---- */
-    .news-bar {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.25rem 1.5rem;
-      margin-bottom: 2rem;
-    }
-    .news-bar h3 { font-size: 1rem; font-weight: 600; color: var(--accent3); margin-bottom: .75rem; }
-    .news-bar ul { list-style: none; }
-    .news-bar li { padding: .35rem 0; font-size: .9rem; color: var(--text-muted); }
-    .news-bar li::before { content: "\2022"; color: var(--accent3); margin-right: .5rem; }
-    .news-bar li a { color: var(--text); text-decoration: underline; text-underline-offset: 2px; }
-    .news-bar li a:hover { color: var(--accent3); }
-
-    /* ---- FOOTER ---- */
     footer {
       text-align: center;
-      padding: 2.5rem 1.5rem;
+      padding: 2.2rem 1.5rem;
       border-top: 1px solid var(--border);
       color: var(--text-muted);
       font-size: .85rem;
     }
 
-    /* ---- RESPONSIVE ---- */
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
       .nav-links { display: none; flex-direction: column; width: 100%; gap: .5rem; padding-top: .75rem; }
       .nav-links.open { display: flex; }
       .nav-inner { flex-wrap: wrap; }
       .mobile-toggle { display: block; }
-      .hero { padding: 3rem 1.5rem 2.5rem; }
-      section { padding: 2.5rem 1rem; }
-      .card-grid, .people-grid, .resource-list { grid-template-columns: 1fr; }
+      .hero { padding: 3rem 1.1rem 2.4rem; }
+      .hero-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .hero-copy { max-width: 100%; }
+      section { padding: 2.4rem 1rem; }
+      .card-grid { grid-template-columns: 1fr; }
+      .hero-subtitle { font-size: 1.06rem; }
     }
   </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <div class="nav-logo"><span class="ai">Java</span> in <span class="jvm">Education</span></div>
+    <div class="nav-logo">Foojay <span class="brand">Java in Education</span></div>
     <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">&#9776;</button>
     <div class="nav-links">
-      <a href="#resources">Resources</a>
+      <a href="#websites" target="_blank" rel="noopener noreferrer">Websites</a>
+      <a href="#tutorials" target="_blank" rel="noopener noreferrer">Tutorials</a>
+      <a href="#books" target="_blank" rel="noopener noreferrer">Books</a>
+      <a href="#minecraft" target="_blank" rel="noopener noreferrer">Minecraft</a>
+      <a href="#raspberry-pi" target="_blank" rel="noopener noreferrer">Raspberry Pi</a>
     </div>
   </div>
 </nav>
 
-<!-- HERO -->
 <header class="hero">
-  <h1>Foojay <span>Java in Education</span> Catalog</h1>
-  <p>A community-driven catalog of Java learning resources &mdash; wikis, tutorials, and tools for students, educators, coding clubs, and developers.</p>
+  <div class="hero-inner">
+    <img class="hero-logo" src="foojay-logo.png" alt="Foojay logo">
+    <div class="hero-copy">
+      <h1>Foojay <span>Java in Education</span> Catalog</h1>
+      <p class="hero-subtitle">A community-driven catalog of Java learning resources with websites, tutorials, videos, books, and tools for students, educators, coding clubs, and developers.</p>
+      <p class="hero-description">The goal is to provide an open, collaborative hub for students, educators, and developers to discover the best Java learning content for teaching, self-learning, and classroom use. This project is a call for the community to collaborate, to show that Java is still strong, and to highlight the numerous resources available for learning or teaching Java today.</p>
+      <p class="hero-description">Community-curated Java learning resources. Contributions are welcome on <a href="https://github.com/foojayio/java-education-catalog" target="_blank" rel="noopener noreferrer">GitHub</a>!</p>
+    </div>
+  </div>
 </header>
 
 <main>
-
-<!-- RESOURCES -->
-<section id="resources">
+<section id="websites">
   <div class="container">
-    <h2 class="section-title">Resources</h2>
-    <p class="section-subtitle">Community-curated Java learning resources. Contributions welcome!</p>
-    <div class="resource-list">
-
-      <a class="card" href="https://github.com/jcp-org/Java-in-Education/wiki/Java-in-Education---Wiki-Page">
-        <span class="card-badge badge-resource">Resource</span>
+    <h2 class="section-title">Websites</h2>
+    <div class="card-grid">
+      <a class="card" href="https://github.com/jcp-org/Java-in-Education/wiki/Java-in-Education---Wiki-Page" target="_blank" rel="noopener noreferrer">
+        <span class="card-badge badge-resource">Website</span>
         <h3>Java in Education &ndash; Wiki Page</h3>
         <p>Community-curated wiki about Java teaching and educational initiatives. Maintained by the JCP (Java Community Process) community.</p>
       </a>
 
-      <a class="card" href="https://foojay.io/java-quick-start/">
-        <span class="card-badge badge-inference">Tutorial</span>
-        <h3>Java Quick Start</h3>
+      <a class="card" href="https://foojay.io/" target="_blank" rel="noopener noreferrer">
+        <span class="card-badge badge-resource">Website</span>
+        <h3>Foojay, the website for Friends Of OpenJDK</h3>
+        <p>Foojay is a central resource for the Java community's daily information needs, a place for friends of OpenJDK, and a community platform for the Java ecosystem, bringing together and helping Java professionals everywhere.</p>
+      </a>
+
+      <a class="card" href="https://javaevolved.github.io/" target="_blank" rel="noopener noreferrer">
+        <span class="card-badge badge-resource">Website</span>
+        <h3>Java Evolved</h3>
+        <p>Java has evolved. Your code can too. A collection of modern Java code snippets. Every old Java pattern next to its clean, modern replacement &mdash; side by side.</p>
+      </a>
+
+      <a class="card" href="https://dev.java/learn/" target="_blank" rel="noopener noreferrer">
+        <span class="card-badge badge-resource">Website</span>
+        <h3>Learn Java on dev.java</h3>
+        <p>A collection of tutorials on how to get started with Java, getting to know the Java language, and more.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<section id="tutorials">
+  <div class="container">
+    <h2 class="section-title">Tutorials</h2>
+    <div class="card-grid">
+      <a class="card" href="https://foojay.io/java-quick-start/" target="_blank" rel="noopener noreferrer">
+        <span class="card-badge badge-framework">Tutorial</span>
+        <span class="card-badge badge-assistant">Video</span>
+        <h3>Foojay Java Quick Start</h3>
         <p>On Foojay.io: Step-by-step instructions to install Java on Windows, Linux, and macOS. And 10 short lessons to learn the very basics of the Java programming language.</p>
       </a>
 
-      <a class="card" href="https://www.pi4j.com/examples/jbang/">
-        <span class="card-badge badge-assistant">Raspberry Pi</span>
-        <h3>Getting Started with Java and Electronics with JBang &ndash; Pi4J</h3>
-        <p>Want to get started with Java programming on the Raspberry Pi? JBang is a great way to create your first program to control electronic components connected to the GPIO pins of a Raspberry Pi.</p>
+      <a class="card" href="https://www.youtube.com/watch?v=V_vXRRydnYI" target="_blank" rel="noopener noreferrer">
+        <span class="card-badge badge-assistant">Video</span>
+        <h3>Creating your first Java application with IntelliJ IDEA</h3>
+        <p>A video tutorial on how to create and run a simple Java application that prints Hello, World! to the system output.</p>
       </a>
 
+      <a class="card" href="https://www.jetbrains.com/help/idea/creating-and-running-your-first-java-application.html" target="_blank" rel="noopener noreferrer">
+        <span class="card-badge badge-assistant">Video</span>
+        <h3>Create your first Java application</h3>
+        <p>A written tutorial on how to create, build, run and package a simple Java application.</p>
+      </a>
+
+      <a class="card" href="https://github.com/devoxx4kids/materials/blob/master/workshops/java/en/chapters/intro.adoc" target="_blank" rel="noopener noreferrer">
+        <span class="card-badge badge-framework">Tutorial</span>
+        <h3>Getting Started with Java by Devoxx4Kids</h3>
+        <p>Installing and Fundamentals.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<section id="books">
+  <div class="container">
+    <h2 class="section-title">Books</h2>
+    <div class="card-grid">
+      <a class="card" href="https://www.amazon.nl/Raising-Young-Coders-Teaching-Programming/dp/B0DVBQZ483" target="_blank" rel="noopener noreferrer">
+        <span class="card-badge badge-inference">Parents</span>
+        <span class="card-badge badge-framework">Teaching</span>
+        <h3>Raising Young Coders: A Parent's Guide to Teaching Programming at Home</h3>
+        <p>Introduce your children to programming at an early age and see how nurturing their interest can significantly contribute to their future success. This book offers creative, kid-friendly tools and projects to ignite childhood curiosity, all while confronting early-age gender biases in tech and supplementing the lack of creative and diverse tech curriculum in schools.</p>
+      </a>
+
+      <div class="card">
+        <span class="card-badge badge-assistant">Raspberry Pi</span>
+        <h3><a href="https://webtechie.be/books/" target="_blank" rel="noopener noreferrer">Getting Started with Java on the Raspberry Pi</a></h3>
+        <p>eBook by Frank Delporte: Controlling physical things with some lines of code is magic! This book includes a lot of information, history about Java itself, and how to install and use Java on the Raspberry Pi to interact with electronic components.</p>
+        <div class="card-links">
+          <a class="icon icon-web" href="https://webtechie.be/books/" target="_blank" rel="noopener noreferrer" title="Website">Website</a>
+          <a class="icon icon-web" href="https://leanpub.com/gettingstartedwithjavaontheraspberrypi/" target="_blank" rel="noopener noreferrer" title="Leanpub">Leanpub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<section id="minecraft">
+  <div class="container">
+    <h2 class="section-title">Minecraft</h2>
+    <div class="card-grid">
+      <a class="card" href="https://github.com/devoxx4kids/materials/tree/master/workshops/minecraft" target="_blank" rel="noopener noreferrer">
+        <span class="card-badge badge-framework">Tutorial</span>
+        <h3>Minecraft Modding by Devoxx4Kids</h3>
+        <p>How to do Minecraft modding with two different tools:</p>
+        <ul>
+          <li>Forge: client-side modding, which only works if you have the mod installed. With Forge, you can do lots of cool things like making new blocks, items, mobs, and even biomes and dimensions.</li>
+          <li>Spigot: server-side modding, anyone who connects to the server can enjoy the mods installed. Most big servers, like Mineplex and Hypixel, are Spigot servers.</li>
+        </ul>
+      </a>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<section id="raspberry-pi">
+  <div class="container">
+    <h2 class="section-title">Raspberry Pi</h2>
+    <div class="card-grid">
+      <div class="card">
+        <span class="card-badge badge-assistant">Raspberry Pi</span>
+        <h3><a href="https://www.pi4j.com/examples/jbang/" target="_blank" rel="noopener noreferrer">Control electronics with Java, JBang, and Pi4J</a></h3>
+        <p>Want to get started with Java programming on the Raspberry Pi? JBang is a great way to create your first program to control electronic components connected to a Raspberry Pi's GPIO pins.</p>
+        <div class="card-links">
+          <a class="icon icon-web" href="https://www.pi4j.com/examples/jbang/" target="_blank" rel="noopener noreferrer" title="Website">Website</a>
+          <a class="icon icon-github" href="https://github.com/Pi4J/pi4j-jbang" target="_blank" rel="noopener noreferrer" title="Repository">Repository</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 </main>
 
-<!-- FOOTER -->
 <footer>
-  <p>Foojay Java in Education Catalog &mdash; Curating Java education resources. Contributions welcome on <a href="https://github.com/foojayio/java-education-catalog">GitHub</a>.</p>
+  <p>Foojay Java in Education Catalog &mdash; Curating Java education resources. Contributions welcome on <a href="https://github.com/foojayio/java-education-catalog" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
 </footer>
 
 </body>
